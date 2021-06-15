@@ -6,5 +6,5 @@ services:
   startCommand: gunicorn app:app
   scaling:
     minInstances: 1
-    maxInstances: 2
-    targetCPUPercent: 40
+    maxInstances: 3
+    targetMemoryPercent: 20
