@@ -7,4 +7,4 @@ services:
   scaling:
     minInstances: 1
     maxInstances: 3
-    targetMemoryPercent: 20
+    targetCPUPercent: 40
