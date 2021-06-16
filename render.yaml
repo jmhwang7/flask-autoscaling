@@ -4,8 +4,4 @@ services:
   env: python
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
-  scaling:
-    minInstances: 1
-    maxInstances: 3
-    targetCPUPercent: 40
-    targetMemoryPercent: 20
+  
