@@ -4,6 +4,10 @@ services:
   env: python
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
+  scaling:
+    minInstances: 1
+    maxInstances: 3
+    targetMemoryPercent: 62
 - type: web
   name: second-flask
   env: python
