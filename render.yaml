@@ -13,6 +13,13 @@ services:
   env: python
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
+- type: cron
+  name: test-cron
+  env: python
+  schedule: "1 2 * * *"
+  buildCommand: "pip install -r requirements.txt"        # ensure it's a string
+  startCommand: grep
+  repo: https://github.com/jmhwang7/flask-autoscaling.git
 databases:
 - name: flask-db
   databaseName: flask_db     
