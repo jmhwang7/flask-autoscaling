@@ -23,7 +23,6 @@ services:
 databases:
 - name: flask-db
   databaseName: flask_db     
-  plan: standard
 envVarGroups:
 - name: rails
   envVars:
