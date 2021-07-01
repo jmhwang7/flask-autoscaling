@@ -30,4 +30,4 @@ envVarGroups:
   - key: APP_PROTOCOL
     value: https://
   - key: CLOUDINARY_API_KEY
-    value: configure_cloudinary_to_enable_uploaded_images
+    value: random
