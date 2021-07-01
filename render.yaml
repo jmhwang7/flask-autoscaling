@@ -30,4 +30,4 @@ envVarGroups:
   - key: APP_PROTOCOL
     value: https://
   - key: CLOUDINARY_API_KEY
-    value: random
+    value: random 2
