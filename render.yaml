@@ -4,30 +4,14 @@ services:
   env: python
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
-  scaling:
-    minInstances: 1
-    maxInstances: 3
-    targetMemoryPercent: 62
 - type: web
   name: second-flask
   env: python
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
-- type: cron
-  name: test-cron
-  env: python
-  schedule: "1 2 * * *"
-  buildCommand: "pip install -r requirements.txt"        # ensure it's a string
-  startCommand: grep
-  repo: https://github.com/jmhwang7/flask-autoscaling.git
-databases:
-- name: flask-db
-  databaseName: flask_db     
-  plan: pro plus
-envVarGroups:
-- name: rails
   envVars:
-  - key: APP_PROTOCOL
-    value: https://
-  - key: CLOUDINARY_API_KEY
-    value: random 2
+    - key: FLASK_ADDR
+      fromService:
+        name: flask
+        type: web
+        property: host
