@@ -3,5 +3,5 @@ services:
     name: flask
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    buildCommand: pipenv install --ignore-pipfile
+    startCommand: pipenv run gunicorn app:app
