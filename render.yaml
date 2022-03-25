@@ -4,4 +4,4 @@ services:
     env: python
     plan: free
     buildCommand: pipenv install --ignore-pipfile
-    startCommand: pipenv run gunicorn app:app
+    startCommand: pipenv run app.py
