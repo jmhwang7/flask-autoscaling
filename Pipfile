@@ -8,6 +8,7 @@ aioredis = {extras = ["hiredis"], version = "*"}
 gunicorn = "==20.1.0"
 hiredis = "==2.0.0"
 Flask = "==1.1.2"
+asyncio = "*"
 
 [dev-packages]
 

@@ -4,4 +4,4 @@ services:
     env: python
     plan: free
     buildCommand: pipenv install --ignore-pipfile
-    startCommand: pipenv run app.py
+    startCommand: pipenv run python app.py
